@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111318">
+  <title>GizmoFix — Smart Finds. Everyday Fixes.</title>
+  <meta name="description" content="Discover clever gadgets and practical everyday problem-solvers from GizmoFix.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="GizmoFix home">
+      <span class="brand-mark">ϟ</span>
+      <span><strong>GizmoFix</strong><small>SMART FINDS. EVERYDAY FIXES.</small></span>
+    </a>
+    <button class="cart-toggle" id="cartToggle" aria-label="Open shopping cart">Bag <span id="cartCount">0</span></button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">CLEVER FINDS FOR EVERYDAY LIFE</p>
+      <h1>Small gadgets.<br><span>Big solutions.</span></h1>
+      <p class="hero-copy">Useful discoveries that make everyday tasks a little easier.</p>
+      <a class="button button-lime" href="#products">Explore products <span aria-hidden="true">↓</span></a>
+      <div class="hero-note"><span class="pulse"></span> Curated practical finds · New discoveries added regularly</div>
+    </section>
+
+    <section class="trust-strip" aria-label="Store values">
+      <div><span>01</span><strong>Useful by design</strong></div>
+      <div><span>02</span><strong>Clear pricing</strong></div>
+      <div><span>03</span><strong>Support when needed</strong></div>
+    </section>
+
+    <section class="products-section" id="products">
+      <div class="section-heading">
+        <div><p class="eyebrow">THE FIRST EDIT</p><h2>Find your fix.</h2></div>
+        <p>Demo products — replace with verified supplier items before selling.</p>
+      </div>
+      <div class="product-grid" id="productGrid"></div>
+    </section>
+
+    <section class="how-section">
+      <p class="eyebrow">HOW IT WORKS</p>
+      <h2>Discover. Choose. Done.</h2>
+      <div class="steps">
+        <article><span>1</span><h3>Find something useful</h3><p>Browse practical gadgets selected to solve everyday problems.</p></article>
+        <article><span>2</span><h3>Add it to your bag</h3><p>Review your selections and check the item details.</p></article>
+        <article><span>3</span><h3>Send an enquiry</h3><p>When the store is ready, checkout can be connected to a real order and payment system.</p></article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand brand-footer" href="#"><span class="brand-mark">ϟ</span><span><strong>GizmoFix</strong><small>SMART FINDS. EVERYDAY FIXES.</small></span></a>
+    <p>Independent concept store. Product availability, shipping and returns will be published before launch.</p>
+    <small>© <span id="year"></span> GizmoFix. Demo storefront.</small>
+  </footer>
+
+  <div class="overlay" id="overlay" hidden></div>
+  <aside class="cart-panel" id="cartPanel" aria-label="Shopping cart" aria-hidden="true">
+    <div class="cart-head"><div><p class="eyebrow">YOUR SELECTION</p><h2>Your bag</h2></div><button class="icon-button" id="closeCart" aria-label="Close cart">×</button></div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-bottom">
+      <div class="subtotal"><span>Subtotal</span><strong id="subtotal">₹0</strong></div>
+      <p class="fine-print">Demo only. Shipping and taxes are not calculated. No payment is collected on this website.</p>
+      <button class="button button-lime button-full" id="checkoutButton">Continue</button>
+      <button class="text-button" id="continueShopping">Continue shopping</button>
+    </div>
+  </aside>
+
+  <dialog id="checkoutDialog" class="checkout-dialog">
+    <form method="dialog" class="dialog-head"><div><p class="eyebrow">NEXT STEP</p><h2>Order enquiry</h2></div><button class="icon-button" aria-label="Close">×</button></form>
+    <div class="dialog-content">
+      <p>This starter site does not take payment or place a real supplier order yet. The next development step is to connect a secure backend and an approved payment provider.</p>
+      <label for="customerName">Your name</label><input id="customerName" autocomplete="name" placeholder="Enter your name">
+      <label for="customerEmail">Email (optional)</label><input id="customerEmail" type="email" autocomplete="email" placeholder="you@example.com">
+      <p class="fine-print">Do not enter card details or sensitive personal information here.</p>
+      <button class="button button-lime button-full" id="copyEnquiry" type="button">Copy demo order summary</button>
+      <p class="notice" id="copyNotice" role="status"></p>
+    </div>
+  </dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
